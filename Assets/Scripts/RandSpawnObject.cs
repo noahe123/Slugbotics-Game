@@ -5,20 +5,13 @@ using UnityEngine;
 public class RandSpawnObjects : MonoBehaviour
 {
 
-    public Vector3 myVec;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.transform.position = new Vector3(Random.Range(-20,20),0.76f,Random.Range(-20,20));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        gameObject.transform.position = new Vector3(Random.Range(-70,70),0.76f,Random.Range(-70,70));
-        
-    }
 }
 
 
