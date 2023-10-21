@@ -23,11 +23,13 @@ public class ObjectInteraction : MonoBehaviour
     void OnCollisionEnter(Collision other){
 
         if (other.gameObject.tag == "Pickup"){
-
+            
+            ObjectsToCollect.objects--;
             other.gameObject.SetActive(false);
             //play child animation
             myAnimation.Play();
             myAudioSource.Play();
+            
             
         }
     }
@@ -37,26 +39,6 @@ public class ObjectInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // while (isTouching){
-
-        //     isTouching = True
-
-        //     //gameObject.tag == "Pickup"
-
-        //     // OBJECT SCALE DECREASE
-        //     // OBJECT gets pulled towards center position of Roomba
-
-        // }
-
-        // if (isAbsorbed){
-
-        //     // ROOMBA SCALE INCREASE  
-            
-        //     // From child object   CALL ANIMATION + PLAY PARTICLE
-        //     // HIDE OBJECT
-
-        //     Debug.Log("Object Absorbed");
-        // }
         
 
     }

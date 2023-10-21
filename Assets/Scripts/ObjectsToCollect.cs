@@ -11,4 +11,9 @@ public class ObjectsToCollect : MonoBehaviour
         objects++;
     }
 
+    void Update(){
+        
+
+    }
+
 }

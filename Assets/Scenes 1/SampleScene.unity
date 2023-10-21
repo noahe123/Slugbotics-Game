@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &213186439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
+  m_PrefabInstance: {fileID: 2018337004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &213186447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213186439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7214a3ec50fde4ebdf265adb37a6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328778216
 GameObject:
   m_ObjectHideFlags: 0
@@ -10606,6 +10623,7 @@ GameObject:
   - component: {fileID: 1895213606}
   - component: {fileID: 1895213610}
   - component: {fileID: 1895213611}
+  - component: {fileID: 1895213612}
   m_Layer: 0
   m_Name: Pickup Test
   m_TagString: Pickup
@@ -10738,6 +10756,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02841a1a82d11c47a210d861173f678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1895213612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895213605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d00efd39c99f540ab55e19072fd593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2018337004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10809,7 +10839,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 213186447}
   m_SourcePrefab: {fileID: 100100000, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
 --- !u!33 &71422414925464812
 MeshFilter:
