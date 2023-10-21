@@ -11,11 +11,13 @@ public class ObjectInteraction : MonoBehaviour
     public bool isTouching;
     public bool isAbsorbed;
 
+    AudioSource myAudioSource;
+    Animation myAnimation;
 
     void Start()
     {
-        
-
+        myAudioSource = GetComponent<AudioSource>();
+        myAnimation = transform.GetChild(0).GetComponent<Animation>();
     }
 
     void OnCollisionEnter(Collision other){
@@ -24,7 +26,8 @@ public class ObjectInteraction : MonoBehaviour
 
             other.gameObject.SetActive(false);
             //play child animation
-            transform.GetChild(0).GetComponent<Animation>().Play();
+            myAnimation.Play();
+            myAudioSource.Play();
             
         }
     }
