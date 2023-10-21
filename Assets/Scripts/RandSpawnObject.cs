@@ -7,7 +7,7 @@ public class RandSpawnObjects : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         newSpawn(checkX(), checkZ());
         

@@ -135,11 +135,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213186439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd7214a3ec50fde4ebdf265adb37a6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameWon: 0
+--- !u!114 &213186451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213186439}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd42783c01c84074883934b71ceb0980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDifficulty: 1
 --- !u!1 &328778216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,8 +5712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564b282c6ecb7b04fb0689c79a3043bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouching: 0
-  isAbsorbed: 0
 --- !u!82 &1198943126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10858,6 +10870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 213186447}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 213186451}
   m_SourcePrefab: {fileID: 100100000, guid: befca98f42e0e094b889a2f9c258735d, type: 3}
 --- !u!33 &71422414925464812
 MeshFilter:
