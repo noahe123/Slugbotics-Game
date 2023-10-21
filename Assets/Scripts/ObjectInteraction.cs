@@ -10,31 +10,44 @@ public class ObjectInteraction : MonoBehaviour
     public bool isTouching;
     public bool isAbsorbed;
 
+
     void Start()
     {
-  
+        
 
+    }
+
+    void OnCollisionEnter(Collision other){
+
+        if (other.gameObject.tag == "Player" && other.gameObject.tag == "Pickup"){
+
+            isTouching = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (isTouching){
+        // while (isTouching){
 
-            // OBJECT SCALE DECREASE
+        //     isTouching = True
+
+        //     //gameObject.tag == "Pickup"
+
+        //     // OBJECT SCALE DECREASE
+        //     // OBJECT gets pulled towards center position of Roomba
+
+        // }
+
+        // if (isAbsorbed){
+
+        //     // ROOMBA SCALE INCREASE  
             
+        //     // From child object   CALL ANIMATION + PLAY PARTICLE
+        //     // HIDE OBJECT
 
-        }
-
-        if (isAbsorbed){
-
-            // ROOMBA SCALE INCREASE  
-            
-            // From child object   CALL ANIMATION + PLAY PARTICLE
-            // HIDE OBJECT
-
-            Debug.Log("Object Absorbed");
-        }
+        //     Debug.Log("Object Absorbed");
+        // }
 
     }
 }
