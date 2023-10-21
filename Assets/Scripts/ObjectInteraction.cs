@@ -6,9 +6,9 @@ public class ObjectInteraction : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [Header{"Variables"}]
-    public bool isTouching
-    public bool isAbsorbed
+    [Header("Variables")]
+    public bool isTouching;
+    public bool isAbsorbed;
 
     void Start()
     {
@@ -22,15 +22,18 @@ public class ObjectInteraction : MonoBehaviour
         while (isTouching){
 
             // OBJECT SCALE DECREASE
+            
 
         }
 
         if (isAbsorbed){
 
-            // ROOMBA SCALE INCREASE
+            // ROOMBA SCALE INCREASE  
+            
+            // From child object   CALL ANIMATION + PLAY PARTICLE
             // HIDE OBJECT
 
-            Debug.Log("Object Absorbed")
+            Debug.Log("Object Absorbed");
         }
 
     }
