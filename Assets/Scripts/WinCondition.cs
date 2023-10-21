@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
+
+    public bool gameWon = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +15,12 @@ public class WinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(ObjectsToCollect.objects == 0){
-            Debug.Log("All Objects Collected!!");
-        }
-        else{
+            if(gameWon == false){
+                Debug.Log("All Objects Collected!!");
+            }   
+        }else{
             Debug.Log("Objects Left to Collect:" + ObjectsToCollect.objects);
         }
     }
