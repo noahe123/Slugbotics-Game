@@ -20,7 +20,7 @@ public class ObjectInteraction : MonoBehaviour
 
     void OnCollisionEnter(Collision other){
 
-        if (other.gameObject.tag == "Player" && other.gameObject.tag == "Pickup"){
+        if (other.gameObject.tag == "Pickup"){
 
             isTouching = true;
             
