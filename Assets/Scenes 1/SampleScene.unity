@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 1198943123}
   - component: {fileID: 1198943122}
   - component: {fileID: 1198943124}
+  - component: {fileID: 1198943125}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -564,6 +565,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1198943125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198943117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564b282c6ecb7b04fb0689c79a3043bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouching: 0
+  isAbsorbed: 0
 --- !u!1 &1495988014
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,6 +5419,7 @@ GameObject:
   - component: {fileID: 1895213608}
   - component: {fileID: 1895213607}
   - component: {fileID: 1895213606}
+  - component: {fileID: 1895213610}
   m_Layer: 0
   m_Name: Pickup Test
   m_TagString: Pickup
@@ -5497,6 +5513,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1895213610
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895213605}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &71422414925464812
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6230,27 +6273,21 @@ Transform:
   - {fileID: 1495988015}
   m_Father: {fileID: 1198943121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8205751178671379991
-Animator:
-  serializedVersion: 5
+--- !u!111 &8205751178671379991
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7646276928197699213}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c80020485205444d83ee74c39ac78b4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0ba0ae1d685667f4094ceafcc1577bef, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &8278215814085081775
 Transform:
   m_ObjectHideFlags: 0
