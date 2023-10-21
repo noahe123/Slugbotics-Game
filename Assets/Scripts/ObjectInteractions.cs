@@ -13,9 +13,11 @@ public class ObjectInteraction : MonoBehaviour
 
     AudioSource myAudioSource;
     Animation myAnimation;
+    ParticleSystem pickup;
 
     void Start()
     {
+        pickup = transform.GetChild(0).GetChild(1).GetComponent<ParticleSystem>();
         myAudioSource = GetComponent<AudioSource>();
         myAnimation = transform.GetChild(0).GetComponent<Animation>();
     }
@@ -28,7 +30,7 @@ public class ObjectInteraction : MonoBehaviour
             //play child animation
             myAnimation.Play();
             myAudioSource.Play();
-            
+            pickup.Play();
         }
     }
 
