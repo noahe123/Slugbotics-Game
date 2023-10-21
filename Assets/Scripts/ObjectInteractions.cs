@@ -23,7 +23,7 @@ public class ObjectInteraction : MonoBehaviour
 
         if (other.gameObject.tag == "Pickup"){
             
-            ObjectsToCollect--;
+            ObjectsToCollect.objects--;
             other.gameObject.SetActive(false);
             //play child animation
             myAnimation.Play();
