@@ -23,7 +23,7 @@ public class ObjectInteraction : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject.tag == "Pickup"){
 
             isTouching = true;
-            Debug.Log
+            
         }
     }
 
