@@ -22,10 +22,14 @@ public class ObjectInteraction : MonoBehaviour
 
         if (other.gameObject.tag == "Pickup"){
 
-            isTouching = true;
+            other.gameObject.SetActive(false);
+            //play child animation
+            transform.GetChild(0).GetComponent<Animation>().Play();
             
         }
     }
+
+
 
     // Update is called once per frame
     void Update()
