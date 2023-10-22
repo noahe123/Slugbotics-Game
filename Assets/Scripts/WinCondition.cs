@@ -6,9 +6,14 @@ public class WinCondition : MonoBehaviour
 {
 
     public bool gameWon = false;
+    RandSpawnObjects randSpawn;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        randSpawn = FindObjectOfType<RandSpawnObjects>().GetComponent<RandSpawnObjects>();
+
         //tells the controller the max timer is 15 seconds
         GameObject.Find("Sofa").GetComponent<MicrogameJamController>().SetMaxTimer(15);
     }
@@ -18,7 +23,7 @@ public class WinCondition : MonoBehaviour
     {
         //Debug.Log(GameObject.Find("Sofa").GetComponent<MicrogameJamController>().GetTimer());
 
-        if(ObjectsToCollect.objects == 0){
+        if(randSpawn.objects == 0){
             if(gameWon == false){
                 gameWon = true;
                 //tells the controller that the game state is Won
@@ -27,7 +32,7 @@ public class WinCondition : MonoBehaviour
                 Debug.Log("All Objects Collected!!");
             }   
         }else{
-            Debug.Log("Objects Left to Collect:" + ObjectsToCollect.objects);
+            Debug.Log("Objects Left to Collect:" + randSpawn.objects);
             
             //calls for the current time and auto checks if <= 0, if so it calls LoseGame()
             GameObject.Find("Sofa").GetComponent<MicrogameJamController>().GetTimer();

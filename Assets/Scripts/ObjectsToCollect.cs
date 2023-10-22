@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ObjectsToCollect : MonoBehaviour
 {
+    RandSpawnObjects randSpawn;
 
     private void Awake(){
-
-        FindObjectOfType<RandSpawnObjects>().GetComponent<RandSpawnObjects>().objects++;
+        randSpawn = FindObjectOfType<RandSpawnObjects>().GetComponent<RandSpawnObjects>();
+        randSpawn.objects++;
     }
 
-    void Update(){
+    void Update()
+    {
         
 
     }

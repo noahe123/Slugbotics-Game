@@ -11,9 +11,13 @@ public class ObjectInteraction : MonoBehaviour
     AudioSource myAudioSource;
     Animation myAnimation;
     ParticleSystem pickup;
+    RandSpawnObjects randSpawn;
+
 
     void Start()
     {
+        randSpawn = FindObjectOfType<RandSpawnObjects>().GetComponent<RandSpawnObjects>();
+
         pickup = transform.GetChild(0).GetChild(1).GetComponent<ParticleSystem>();
         myAudioSource = GetComponent<AudioSource>();
         myAnimation = transform.GetChild(0).GetComponent<Animation>();
@@ -23,7 +27,7 @@ public class ObjectInteraction : MonoBehaviour
 
         if (other.gameObject.tag == "Pickup"){
             
-            ObjectsToCollect.objects--;
+            randSpawn.objects--;
             other.gameObject.SetActive(false);
             //play child animation
             myAnimation.Play();
