@@ -4,46 +4,40 @@ using UnityEngine;
 
 public class RandSpawnObjects : MonoBehaviour
 {
+    public GameObject objectToSpawn; // The prefab or object to spawn.
+    public int numberOfObjects = 5; // Number of objects to spawn.
+    public int objects = 0;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        newSpawn(checkX(), checkZ());
-        
+        SpawnObjects(numberOfObjects);
     }
 
-    void  newSpawn(float xLocation, float zLocation){
-        
-        gameObject.transform.position = new Vector3(xLocation, 0.76f, zLocation);
-    }
-
-    float checkX(){
-        
-        float xLoc = Random.Range(-20,20);
-
-        //need to avoid the ranges of -2 and -2 on the x and z axis
-        if(xLoc >= -2 && xLoc <= 2){
-            checkX();
+    void SpawnObjects(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            Vector3 randomPosition = GetRandomPosition();
+            Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
         }
-
-
-        Debug.Log(xLoc);
-        return xLoc;
     }
 
-    float checkZ(){
-        float zLoc = Random.Range(-20,20);
+    Vector3 GetRandomPosition()
+    {
+        float xLocation, zLocation;
 
-        //need to avoid the ranges of -2 and -2 on the x and z axis
-        if(zLoc >= -2 && zLoc <= 2){
-            checkZ();
-        }
+        do
+        {
+            xLocation = Random.Range(-20f, 20f);
+            zLocation = Random.Range(-20f, 20f);
+        } while (IsInAvoidedRange(xLocation, zLocation));
 
-        Debug.Log(zLoc);
-        return zLoc;
+        return new Vector3(xLocation, 0.76f, zLocation);
     }
 
+    bool IsInAvoidedRange(float x, float z)
+    {
+        return (x >= -2f && x <= 2f) && (z >= -2f && z <= 2f);
+    }
 }
-
-

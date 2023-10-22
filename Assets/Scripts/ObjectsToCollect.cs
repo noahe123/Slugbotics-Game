@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ObjectsToCollect : MonoBehaviour
 {
-    public static int objects = 0;
 
     private void Awake(){
 
-        objects++;
+        FindObjectOfType<RandSpawnObjects>().GetComponent<RandSpawnObjects>().objects++;
     }
 
     void Update(){
