@@ -29,8 +29,8 @@ public class RandSpawnObjects : MonoBehaviour
 
         do
         {
-            xLocation = Random.Range(-20f, 20f);
-            zLocation = Random.Range(-20f, 20f);
+            xLocation = Random.Range(-30f, 20f);
+            zLocation = Random.Range(-30f, 20f);
         } while (IsInAvoidedRange(xLocation, zLocation));
 
         return new Vector3(xLocation, 0.76f, zLocation);
