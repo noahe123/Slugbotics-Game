@@ -12,9 +12,7 @@ public class ObjectsToCollect : MonoBehaviour
     }
 
     void Update()
-    {
-        
-
+    {   
     }
 
 }

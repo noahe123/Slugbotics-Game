@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
-
+    public GameObject objUI;
     public bool gameWon = false;
     RandSpawnObjects randSpawn;
 
@@ -22,6 +23,11 @@ public class WinCondition : MonoBehaviour
     void Update()
     {
         //Debug.Log(GameObject.Find("Sofa").GetComponent<MicrogameJamController>().GetTimer());
+
+        objUI = GameObject.Find("ScoreKeeper");
+
+        objUI.GetComponent<Text>().text = "Objects Remaining: " + randSpawn.objects.ToString();
+
 
         if(randSpawn.objects == 0){
             if(gameWon == false){
