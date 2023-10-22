@@ -25,8 +25,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, -movement, Time.deltaTime * rotationSpeed, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
 
-        Debug.DrawRay(transform.position, newDirection, Color.red);
-
         // Apply the movement to the Rigidbody
         rb.velocity = movement;
     }
